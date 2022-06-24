@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>CORCHEA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/aceituna.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="conexionApi.js"></script>
+	<style>
+		.ejemplo{
+			border: 0px solid blue;
+			width: 150px;
+			background-color: gray;
+			height: 150px;
+			border-radius: 20px;
+		}
+	</style>
+</head>
+
+<body>
+<div data-role="page" id="home">
+
+	<div data-role="panel" id="mypanel" data-display="overlay">
+	    <p>Panel Example</p>
+	    <a href="#home" data-rel="close" class="ui-btn">Close panel</a>
+	</div>
+
+
+	<div data-role="header" data-position="fixed">
+		<h1>C O R C H E A</h1>
+	</div>
+
+	<div role="main" class="ui-content">
+		<h2 style="text-align: center;">Bienvenidx</h2>
+		<p>
+			<img src="images/doblecorchea.png" alt="" width="100%">
+		</p>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+	      <ul>
+	        <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+	        <li><a href="#canciones" data-icon="star" data-transition="flip" onclick="getCanciones()">Canciones</a></li>
+	        <li><a href="#mypanel" data-icon="gear">Panel</a></li>
+	      </ul>
+	    </div>
+	</div>
+</div>
+
+
+
+<div data-role="page" id="canciones">
+
+	<div data-role="panel" id="mypanel" data-display="overlay">
+	    <p>Panel Example</p>
+	    <a href="#home" data-rel="close" class="ui-btn">Close panel</a>
+	</div>
+
+
+	<div data-role="header" data-position="fixed">
+		<h1>C O R C H E A</h1>
+	</div>
+
+	<div role="main" class="ui-content">
+		<a href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Registrar Canción</a>
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar canciones..." data-inset="true" id="datos">
+		</ul>
+	</div>
+
+	<div>
+		<ul style="list-style: none; margin-left: -40px" id="idCanciones">
+		<!-- canciones -->			
+		</ul>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+	      <ul>
+	        <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+	        <li><a href="#canciones" data-icon="star" data-transition="flip" onclick="getCanciones()">Canciones</a></li>
+	        <li><a href="#mypanel" data-icon="gear">Panel</a></li>
+	      </ul>
+	    </div>
+	</div>
+</div>
+
+
+<div data-role="page" id="detalle">
+
+	<div data-role="panel" id="mypanel" data-display="overlay">
+	    <p></p>
+	    <a href="#home" data-rel="close" class="ui-btn">Close panel</a>
+	</div>
+
+
+	<div data-role="header" data-position="fixed">
+		<h1>C O R C H E A</h1>
+	</div>
+
+	<div role="main" class="ui-content">
+		<div id="imagen">
+			
+		</div>
+		<div style="text-align: center;" id="nombre_canción">
+
+		</div>
+		<a href="#canciones" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">Regresar</a>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+	      <ul>
+	        <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+	        <li><a href="#canciones" data-icon="star" data-transition="flip" onclick="getCanciones()">Canciones</a></li>
+	        <li><a href="#mypanel" data-icon="gear">Panel</a></li>
+	      </ul>
+	    </div>
+	</div>
+</div>
+
+</body>
+</html>
